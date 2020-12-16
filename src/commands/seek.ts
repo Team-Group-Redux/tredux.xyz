@@ -15,7 +15,7 @@ export default class SeekCommand implements Command {
   execute = async(ctx: CommandContext, position: string) => {
     const player = this.music.joinAndGetPlayer(ctx.member.voice.channel, ctx.channel);
     if (player.q.length <= 0)
-      throw new TypeError('Nenhuma faixa atualmente tocando);
+      throw new TypeError('Nenhuma faixa atualmente tocando');
 
     const pos = +position;    
     if (!pos)
